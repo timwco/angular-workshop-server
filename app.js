@@ -50,7 +50,7 @@ app.use('/collections', routePublic);
 app.use('/secure/collections', routeSecure);
 
 // Light It Up!
-db.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/test', function(err) {
+db.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/test', function(err) {
   if (err) {
     console.log('Unable to connect to Mongo.')
     process.exit(1)
